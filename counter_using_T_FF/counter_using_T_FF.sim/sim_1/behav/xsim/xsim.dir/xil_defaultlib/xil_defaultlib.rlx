@@ -1,0 +1,8 @@
+0.7
+2020.2
+May 21 2025
+22:59:56
+/home/navya/User-Data/du-study/sem3/DSD_verilog/counter_using_T_FF/counter_using_T_FF.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
+/home/navya/User-Data/du-study/sem3/DSD_verilog/counter_using_T_FF/counter_using_T_FF.srcs/sim_1/new/tb_counter.v,1763391465,verilog,,,,tb_counter,,,../../../../../../../../../Xilinx/2025.1/data/rsb/busdef,,,,,
+/home/navya/User-Data/du-study/sem3/DSD_verilog/counter_using_T_FF/counter_using_T_FF.srcs/sources_1/new/T_ff.v,1763431498,verilog,,/home/navya/User-Data/du-study/sem3/DSD_verilog/counter_using_T_FF/counter_using_T_FF.srcs/sources_1/new/counter.v,,T_ff,,,../../../../../../../../../Xilinx/2025.1/data/rsb/busdef,,,,,
+/home/navya/User-Data/du-study/sem3/DSD_verilog/counter_using_T_FF/counter_using_T_FF.srcs/sources_1/new/counter.v,1763430793,verilog,,/home/navya/User-Data/du-study/sem3/DSD_verilog/counter_using_T_FF/counter_using_T_FF.srcs/sim_1/new/tb_counter.v,,counter,,,../../../../../../../../../Xilinx/2025.1/data/rsb/busdef,,,,,

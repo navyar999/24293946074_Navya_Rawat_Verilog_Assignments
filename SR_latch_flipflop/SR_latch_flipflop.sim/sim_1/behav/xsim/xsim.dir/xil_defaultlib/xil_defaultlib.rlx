@@ -1,9 +1,0 @@
-0.7
-2020.2
-May 21 2025
-22:59:56
-/home/navya/User-Data/du-study/sem3/DSD_verilog/SR_latch_flipflop/SR_latch_flipflop.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
-/home/navya/User-Data/du-study/sem3/DSD_verilog/SR_latch_flipflop/SR_latch_flipflop.srcs/sim_1/new/tb_flipflop.v,1763372480,verilog,,,,tb_flipflop,,,../../../../../../../../../Xilinx/2025.1/data/rsb/busdef,,,,,
-/home/navya/User-Data/du-study/sem3/DSD_verilog/SR_latch_flipflop/SR_latch_flipflop.srcs/sim_1/new/tb_latch.v,1762941106,verilog,,,,tb_latch,,,../../../../../../../../../Xilinx/2025.1/data/rsb/busdef,,,,,
-/home/navya/User-Data/du-study/sem3/DSD_verilog/SR_latch_flipflop/SR_latch_flipflop.srcs/sources_1/new/Flipflop.v,1763372437,verilog,,/home/navya/User-Data/du-study/sem3/DSD_verilog/SR_latch_flipflop/SR_latch_flipflop.srcs/sim_1/new/tb_flipflop.v,,Flipflop,,,../../../../../../../../../Xilinx/2025.1/data/rsb/busdef,,,,,
-/home/navya/User-Data/du-study/sem3/DSD_verilog/SR_latch_flipflop/SR_latch_flipflop.srcs/sources_1/new/Latch.v,1762941106,verilog,,/home/navya/User-Data/du-study/sem3/DSD_verilog/SR_latch_flipflop/SR_latch_flipflop.srcs/sim_1/new/tb_latch.v,,Latch,,,../../../../../../../../../Xilinx/2025.1/data/rsb/busdef,,,,,

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/05/2025 12:44:30 PM
+// Create Date: 11/17/2025 01:29:50 PM
 // Design Name: 
-// Module Name: tb_Pencoder
+// Module Name: tb_adder
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,27 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_Pencoder(
+module tb_adder(
 
     );
 
-reg d0, d1, d2, d3;
-wire y0, y1 , v;
+reg a, b, m;
+wire cout, s;
 
-P_encoder uut(d0, d1, d2, d3, y0, y1, v);
+Universal_adder uut(a, b, m, cout, s);
 
 initial begin
 
-d0 = 0; d1 =0; d2= 0; d3 = 0;
-#10
-d0 = 1; d1 =0; d2= 0; d3 = 0;
-#10
-d0 = 1; d1 =1; d2= 0; d3 = 0; // dont care for 0
-#10
-d0 = 1; d1 =0; d2= 1; d3 = 0; // dont care for 0 and 1
-#10
-d0 = 0; d1 =1; d2= 0; d3 = 1; // dont care for 0 1 and 2
-#10
+a=0; b=0; m=0; #10   // 0 + 0
+a=1; b=1; m=0; #10   // 1 + 1
+a=1; b=1; m=1; #10   // 1 - 1
+a=1; b=0; m=1; #10   // 1 - 0
+
+
 $finish;
-end
+
+end    
+
 endmodule

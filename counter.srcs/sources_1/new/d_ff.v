@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/05/2025 10:21:23 AM
+// Create Date: 11/17/2025 03:32:00 PM
 // Design Name: 
-// Module Name: tb_AND
+// Module Name: d_ff
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,24 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_AND(
-
+module d_ff(
+    input d, clk, RESET,
+    output reg q
     );
     
-reg a, b;
-wire y;
-
-AND_gate uut(a, b, y);
-
-initial begin;
-
-a = 0;b = 0;#10
-a = 0;b = 1;#10
-a = 1;b = 0;#10
-a = 1;b = 1;#10
-
-$finish;
-
+always @(posedge clk or posedge RESET) begin // active when low
+    if (!RESET)
+        q <= 1'b0;
+     else
+        q <= d;
 end
-
 endmodule
+

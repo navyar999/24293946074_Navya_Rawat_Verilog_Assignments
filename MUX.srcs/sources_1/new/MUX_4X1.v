@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/05/2025 10:21:23 AM
+// Create Date: 11/12/2025 05:58:14 PM
 // Design Name: 
-// Module Name: tb_AND
+// Module Name: MUX_4X1
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,24 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_AND(
-
+module MUX_4X1(
+    input  wire i0, i1, i2, i3,
+    input  wire s0, s1,         
+    output wire y  
     );
     
-reg a, b;
-wire y;
-
-AND_gate uut(a, b, y);
-
-initial begin;
-
-a = 0;b = 0;#10
-a = 0;b = 1;#10
-a = 1;b = 0;#10
-a = 1;b = 1;#10
-
-$finish;
-
-end
-
+    assign y = (~s1 & ~s0 & i0) | 
+               (~s1 &  s0 & i1) | 
+               ( s1 & ~s0 & i2) | 
+               ( s1 &  s0 & i3);
 endmodule

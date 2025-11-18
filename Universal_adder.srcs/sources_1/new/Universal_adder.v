@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/05/2025 10:21:23 AM
+// Create Date: 11/17/2025 01:28:53 PM
 // Design Name: 
-// Module Name: tb_AND
+// Module Name: Universal_adder
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,24 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_AND(
-
+module Universal_adder(
+    input a, b, m,
+    output  cout, s
     );
+ 
+wire cin, b_afterxor;
+assign b_afterxor = m ^ b;
+assign cin = m;
+assign s =  a ^ b_afterxor ^ cin;
+assign cout = (a & b_afterxor) | (b_afterxor & cin) | (a & cin);
     
-reg a, b;
-wire y;
-
-AND_gate uut(a, b, y);
-
-initial begin;
-
-a = 0;b = 0;#10
-a = 0;b = 1;#10
-a = 1;b = 0;#10
-a = 1;b = 1;#10
-
-$finish;
-
-end
-
 endmodule

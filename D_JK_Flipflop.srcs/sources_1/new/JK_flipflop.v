@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/05/2025 10:21:23 AM
+// Create Date: 11/12/2025 10:44:23 PM
 // Design Name: 
-// Module Name: tb_AND
+// Module Name: JK_flipflop
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,24 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_AND(
-
+module JK_flipflop(
+    input j , k, clk, RESET,
+    output reg q
     );
-    
-reg a, b;
-wire y;
 
-AND_gate uut(a, b, y);
-
-initial begin;
-
-a = 0;b = 0;#10
-a = 0;b = 1;#10
-a = 1;b = 0;#10
-a = 1;b = 1;#10
-
-$finish;
-
-end
-
+always @(posedge clk or posedge RESET) begin
+    if(RESET) // active when high
+        q <= 1'b0;
+    else if(k & j)
+        q <= ~q;
+    else if(j)
+        q <= 1'b1;
+    else if(k)
+        q <= 1'b0;
+     else q <= q;
+ end
+ 
 endmodule

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/05/2025 10:21:23 AM
+// Create Date: 11/17/2025 04:09:42 PM
 // Design Name: 
-// Module Name: tb_AND
+// Module Name: counter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,24 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_AND(
-
+module counter(
+    input clk, RESET,
+    output q0, q1, q2
     );
     
-reg a, b;
-wire y;
+wire t0, t1, t2;
+assign t0 = 1'b1;
+assign t1 = q0;
+assign t2 = q0 & q1;
 
-AND_gate uut(a, b, y);
-
-initial begin;
-
-a = 0;b = 0;#10
-a = 0;b = 1;#10
-a = 1;b = 0;#10
-a = 1;b = 1;#10
-
-$finish;
-
-end
+T_ff ff0(t0, clk, RESET, q0);
+T_ff ff1(t1, clk, RESET, q1);
+T_ff ff2(t2, clk, RESET, q2);
 
 endmodule

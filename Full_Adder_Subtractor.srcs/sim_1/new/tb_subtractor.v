@@ -26,6 +26,7 @@ module tb_subtractor(
     
 reg a0, a1, bin;
 wire d, bout;
+integer i;
 
 Full_subtractor uut(a0, a1, bin, d, bout);
 

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/05/2025 10:21:23 AM
+// Create Date: 11/12/2025 10:44:09 PM
 // Design Name: 
-// Module Name: tb_AND
+// Module Name: D_flipflop
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,24 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_AND(
-
+module D_flipflop(
+input d, clk,
+    output q, qbar
     );
     
-reg a, b;
-wire y;
+ wire sg, rg;
 
-AND_gate uut(a, b, y);
-
-initial begin;
-
-a = 0;b = 0;#10
-a = 0;b = 1;#10
-a = 1;b = 0;#10
-a = 1;b = 1;#10
-
-$finish;
-
-end
+assign #1 sg = ~(clk & d);
+assign #1 rg = ~(clk & ~d);
+assign #1 q = ~(sg & qbar);
+assign #1 qbar = ~(rg & q);
 
 endmodule

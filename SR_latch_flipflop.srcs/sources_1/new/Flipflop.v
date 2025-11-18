@@ -22,15 +22,19 @@
 
 module Flipflop(
     input s, r, clk,
-    output q, qbar
+    output reg q,
+    output qbar
     );
 
-wire sg, rg;
+assign qbar = ~q;
 
-assign #1 sg = ~(sg & s);
-assign #1 rg = ~(rg & r);
-assign #1 q = ~(sg & qbar);
-assign #1 qbar = ~(rg & q);
-    
+always @(posedge clk) begin
+    case({s, r})
+        2'b00: q <= q;
+        2'b10: q <= 1'b1;
+        2'b01: q <= 1'b0;
+        2'b11: q <= 1'bx;
+    endcase
+end
 
 endmodule

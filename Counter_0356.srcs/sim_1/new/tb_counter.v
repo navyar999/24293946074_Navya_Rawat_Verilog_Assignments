@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 11/17/2025 04:10:55 PM
+// Create Date: 11/19/2025 08:28:39 PM
 // Design Name: 
-// Module Name: T_ff
+// Module Name: tb_counter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,17 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module T_ff(
-    input t, clk, RESET,
-    output reg q
+module tb_counter(
     );
     
-always @(posedge clk or posedge RESET) begin
-    if(RESET) // active when high
-        q <= 1'b0;
-     else if(t)
-        q <= ~q;
-        
-end
+    reg clk,reset;
+    wire [2:0]q;
+    
+    counter uut(clk,reset,q);
+    initial
+    begin
+    clk=0;
+    #5
+    forever #5 clk=~clk;
+    end
+    
+    initial 
+    begin
+    reset =1;
+    #10
+    reset=0;
+    #50
+    $finish;
+    end
+    
 endmodule
-
